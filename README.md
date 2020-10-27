@@ -1,2 +1,2 @@
-# SimonStore
+# Joker
 Commerce electronique
