@@ -14,7 +14,7 @@
 
     <link rel='stylesheet' href='./css/style1.css'>
     
-    <title>Hello, world!</title>
+    <title>GIT WORKS!</title>
   </head>
   <body>
     
