@@ -1,2 +1,2 @@
-# Panier
+# SimonStore
 Commerce electronique
