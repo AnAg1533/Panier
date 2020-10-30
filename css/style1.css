@@ -220,3 +220,31 @@ label
     color:white;
 }
 
+.Quantite
+{
+    border:none;
+    color:black;
+    position:relative;
+    left:25%;
+}
+.QuantiteInput
+{
+    
+    color:black;
+    font-size:1.2em;
+    position:relative;
+    left:25%;
+    height:25px;
+    width:60px;
+    
+}
+
+.QuantiteDiv
+{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width:250px;
+
+}

@@ -71,7 +71,9 @@
               <label class='priceTag'>
                 Prix : 50$
                 </label>
-              
+              <div class='QuantiteDiv'>
+                <label class='Quantite'>Nbr : </label><input class='QuantiteInput' type='number' min='1' max='100'/> 
+              </div>
               
               <div>
                 
