@@ -4,4 +4,11 @@ $(function()
     {
         $('.sub').click();
     })
+
+
+    $('#red').click(function(e)
+    {
+        
+
+    })
 })

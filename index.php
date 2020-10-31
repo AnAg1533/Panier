@@ -88,20 +88,18 @@
                   </select>
               </div>
               <div class='colors'>
-                <div class='color' id='red'> 
-                <div class='color' id='black'>
-                <div class='color' id='yellow'>
-
+                Color : Sky blue
               </div>
 
                 
 
-                <input type='submit' value='order' class='confirmer'>
+              <div><input type='submit' value='order' class='confirmer'>
               
           </form>
       </div>
-    
-    
+
+
+      
     
     </div>
 
