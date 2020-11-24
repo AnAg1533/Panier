@@ -21,7 +21,7 @@
 
     <link rel='stylesheet' href='./css/style1.css'>
     
-    <title>GIT WORKS! LOOK ANAS !!!!! STOP TALKING!!!</title>
+    <title>GIT WORKS! LOOK ANAS !!!</title>
   </head>
   <body>
     

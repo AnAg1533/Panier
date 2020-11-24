@@ -81,8 +81,7 @@
 
         </div> 
 <?php
-
-
+require_once("inc/fonction.php");
 
 if(isset($_POST["inscrire"]))
 		{
@@ -96,7 +95,7 @@ if(isset($_POST["inscrire"]))
 			$idmembre=substr($nom,0,3).substr($prenom,0,2);
 			
 			//2)Connexion avec la base de donnees
-			include("connexion.php");
+			//include("connexion.php");
 			
 			//3)Requete SQL d'inscription de membre
 			$inscription=mysqli_query($conn,"insert into membres values('$idmembre',
