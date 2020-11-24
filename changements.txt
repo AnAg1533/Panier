@@ -4,3 +4,5 @@
 
 2020/11/24 : -Ajout inscription/login FORMS back-end, front end a finaliser le design 
             - base de donner table membres code dans le query.sql
+            - added inc folder with functions for the panier Affichage delete videpanier and creation panier
+            - added la page panier.php qui sera la page recuperant les donners venant du bouton order!
