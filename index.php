@@ -32,7 +32,7 @@
         }
         
     </style> 
-    <title>Welcome to Joker's Store</title>
+    <title>1Welcome to Joker's Store </title>
 
   </head>
   <body>
