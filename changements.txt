@@ -1,0 +1,6 @@
+2020-11-24 : Ajout d'un control panel 
+             Creation d'un table produit copie et colle le query.sql dans ta base de donnees
+             
+
+2020/11/24 : -Ajout inscription/login FORMS back-end, front end a finaliser le design 
+            - base de donner table membres code dans le query.sql
