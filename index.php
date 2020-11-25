@@ -1,3 +1,10 @@
+<?php 
+
+	session_start();
+	session_destroy();
+	$_SESSION=array();
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,78 +15,84 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        body{
-            background-image:url(./images/boardwalk.jpg)  ;
-            background-position: relative;
-            background-size: cover;
-        }
-        .signin{
-            
-            background-color: white;
-           
-            align-content: center;
-        }
-        h1{
-           color:red;
-           position: absolute;
-           margin-left: 575px;        
-        }
+		body
+		{
+			background:url('./images/backg.jpg');
+			background-repeat:no-repeat;
+			background-attachment: fixed;
+			background-size:cover;
+		}
+		.form1
+		{
+			width:400px;
+			height:260px;
+			display:flex;
+			justify-content:space-evenly;
+			flex-direction:column;
+			padding:20px;
+			background:rgb(0,0,0,0.9);
+			border-radius:10px;
+		}
+		.form2
+		{
+			width:400px;
+			height:500px;
+			display:flex;
+			justify-content:space-evenly;
+			flex-direction:column;
+			padding:20px;
+			background:rgb(0,0,0,0.9);
+			border-radius:10px;
 
-        #logAdmin{
-            float: right;
-            margin-right: 50px;
-            margin-top: 10px;
-        }
+		}
+		.formsDiv
+		{
+			display:flex;
+			justify-content: space-evenly;
+			align-items:center;
+			margin-top:100px;
+		}
+
+		h1
+		{
+			color:#1BC441;
+			border-bottom:solid #1BC441;
+			width:210px;
+		}
+
+		.Admin
+		{
+			color:#1BC441;
+			font-weight:bold;
+		}
         
     </style> 
     <title>1Welcome to Joker's Store </title>
 
   </head>
   <body>
-       <!-- allo -->
-         <!-- <table border="1" style="color:white;">
-                <tr>
-                    <td><a href="login.php">login</a></td>
-                    <td><a href="inscription.php">register</a></td>
-                </tr>
-            </table>
- -->
-        
-       
-         <div class="signin">
-         <h1 style="background-color: black;">WELCOME TO JOKER'S STORE</h1>
-         <a id="logAdmin" href="cpanelLogin.php"><input type="submit" value="Admin Login"></a>
-         <table border="1px" width="100%">
-	<tr>
-		<td>
-        <h3>Branchez-vous membre! </h3>
-		<form method="post">
-			<table>
-				<tr><td>Login</td> <td><input type="text" name="loginmembre" value=""></td> </tr>
-				<tr><td>Password</td> <td> <input type="password" name="passwordmembre" value=""></td></tr>
-				<tr><td><input type="submit" name="membre" value="Entrer"></td>
+		<a href='cpanelLogin.php' class='Admin'>Vers l'Admin --></a>
+		<div class='formsDiv'>
+			<form method="post" class='form1'>
+					<h1>CONNEXION</h1>
+					<input type="text" name="loginmembre"  placeholder="Login" value="">
+					<input type="password" name="passwordmembre"  placeholder="Password" value="">
+					<input type="submit" name="membre" value="Entrer">
 				
-				</tr>
-			</table>
-		</form>
-		</td>
-		<!-- Formulaire section inscription membre -->
-		<td> 
-			<h3> Incription d'un nouveau membre! </h3>
-			<form method="post">
-				<table>
-				<tr><td>Nom</td> <td><input type="text" name="nom" value=""></td></tr>
-				<tr><td>Prenom</td> <td><input type="text" name="prenom" value=""></td></tr>
-				<tr><td>Telephone</td> <td><input type="text" name="telephone" value=""></td></tr>
-				<tr><td>Adresse</td> <td><input type="text" name="adresse" value=""></td></tr>
-				<tr><td>Email</td> <td><input type="text" name="email" value=""></td></tr>
-				<tr><td>Login</td> <td><input type="text" name="login" value=""></td></tr>
-				<tr><td>Password</td> <td><input type="password" name="password" value=""></td></tr>
-				<tr><td><input type="submit" name="inscrire" value="Inscrire"></td></tr>
-				</table>
 			</form>
-
-        </div> 
+			<form method="post" class='form2'>		
+				<h1>INSCRIPTION</h1>
+				<input type="text" name="nom" placeholder="Nom" value="">
+				<input type="text" name="prenom" placeholder="Prenom" value="">
+				<input type="text" name="telephone"  placeholder="Telephone" value="">
+				<input type="text" name="adresse"  placeholder="Adresse" value="">
+				<input type="text" name="email"  placeholder="Email" value="">
+				<input type="text" name="login"  placeholder="Login" value="">
+				<input type="password" name="password" placeholder='password' value="">
+				<input type="submit" name="inscrire" value="Inscrire">		
+			</form>
+		</div>
+        
 <?php
 require_once("inc/fonction.php");
 
@@ -120,7 +133,7 @@ if(isset($_POST["inscrire"]))
 		}
 
 
-        session_start();
+        
 
         //1)Recuperation des donnees par $_POST du MEMBRE
 				if(isset($_POST["membre"]))

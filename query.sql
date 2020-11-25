@@ -1,10 +1,9 @@
 CREATE DATABASE Clothing;
 
-
-CREATE TABLE produit(id INT AUTO_INCREMENT,
-nomProduit VARCHAR(255),prixProduit VARCHAR(255),
-logoProduit VARCHAR(255),imageProduit VARCHAR(255),
-PRIMARY KEY(id));
+CREATE TABLE produits(id_produit INT AUTO_INCREMENT,reference VARCHAR(20),
+categorie VARCHAR(20),titre VARCHAR(20),description VARCHAR(20),
+couleur VARCHAR(20),taille VARCHAR(20),public VARCHAR(20),photo VARCHAR(50),
+prix INT,stock INT,PRIMARY KEY(id_produit));
 
 
 

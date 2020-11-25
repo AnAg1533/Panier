@@ -9,10 +9,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+
+      form
+      {
+        height:250px;
+        width:250px;
+        border:solid black;
+        padding:10px;
+        margin:auto;
+        margin-top:150px;
+      }
+      input
+      {
+        margin:10px;
+      }
+
+    </style>
   </head>
   <body>
 
     <form method="POST" action="traitment1.php">
+      <h1>LOGIN</h1>
         <input type='text' placeholder='username' name='username'/>
         <input type='password' placeholder='password' name='password'/>
         <input type='submit'/>
