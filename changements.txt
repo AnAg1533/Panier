@@ -8,6 +8,7 @@
             - added la page panier.php qui sera la page recuperant les donners venant du bouton order!
 
 2020/11/30: - Prensenting the raw draft to the teacher in class !
+            - WE ARE ON THE RIGHT TRACK MY BOY !!!
             - Grading on Platform Admin/paiement paypal/panier d'achat! ps: on es en avance sur tlm (taurais aimer voir le projet des autres xD)!!
             - A FAIRE IMPORTANT-----------------
             - Contenu des jeans sur la page de vente doit venir de la base de donner
