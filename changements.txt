@@ -8,4 +8,4 @@
             - added la page panier.php qui sera la page recuperant les donners venant du bouton order!
 
 2020/11/30: - Prensenting the raw draft to the teacher in class !
-            - Grading on Platform Admin/paiement paypal/panier d'achat! ps: on es en avance sur tlm !!
+            - Grading on Platform Admin/paiement paypal/panier d'achat! ps: on es en avance sur tlm (taurais aimer voir le projet des autres xD)!!
