@@ -11,7 +11,7 @@
             - WE ARE ON THE RIGHT TRACK MY BOY !!!
             - Grading on Platform Admin/paiement paypal/panier d'achat! ps: on es en avance sur tlm (taurais aimer voir le projet des autres xD)!!
             - A FAIRE IMPORTANT-----------------
-            - Contenu des jeans sur la page de vente doit venir de la base de donner
-            - faire la page detail dans un  jumbotron 
+            - Contenu des jeans sur la page de vente doit venir de la base de donner -- Done
+            - faire la page detail dans un  jumbotron -- well ill do it in an independent page
             - Page de confirmation dachat relier au panier dachat avec bouton paypal
             - paiement paypal avec fake account ! 

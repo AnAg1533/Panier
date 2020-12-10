@@ -5,6 +5,31 @@
 
 
 ?>
+
+
+<?php
+
+  $server="localhost";
+  $database="clothing";
+  $password="password";
+  $username="username";
+
+  $conn = mysqli_connect($server,$username,$password,$database);
+
+  if(!$conn)
+  {
+    die("Connection failed");
+  }
+ 
+  $sql = "SELECT * FROM produits";
+
+  $result  = mysqli_query($conn,$sql);
+
+ 
+ 
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -65,45 +90,58 @@
 
     <div class='Products'>
 
-      <div class='ProductCard' style='background:#E9EAEB'>
+    <?php
 
-          <div class='red' style='background:#E71E27'></div>
 
-          <img src='./images/jeans.png' class='item'>
+        if(mysqli_num_rows($result)>0)
+          while($row = mysqli_fetch_assoc($result)) 
+          {
+            ?>
+            
+            <div class='ProductCard' style='background:#E9EAEB'>
 
-          <img class='logo' src='./images/H&M.png'/>
-          <h1 class='description'>H&M Denim Jeans</h1>
-          <form class='achat'>
-              
-              <label class='priceTag'>
-                Prix : 50$
-                </label>
-              <div class='QuantiteDiv'>
-                <label class='Quantite'>Nbr : </label><input class='QuantiteInput' type='number' min='1' max='100'/> 
-              </div>
-              
-              <div>
+            <div class='red' style='background:#E71E27'></div>
+  
+            <img src='./uploads/<?php echo $row['photo']?>' class='item'>
+  
+            <img class='logo' src='./images/H&M.png'/>
+            <h1 class='description'><?php echo $row['titre'];?></h1>
+            <form class='achat'>
                 
-                <label for='size'> 
-                taille :
-                </label> 
-                  <select name='size'>
-                    <option>30</option>
-                    <option>32</option>
-                    <option>34</option>
-                    <option>36</option>
-                  </select>
-              </div>
-              <div class='colors'>
-                Color : Sky blue
-              </div>
-
+                <label class='priceTag'>
+                  Prix : <?php echo $row['prix']?> $
+                  </label>
+               
                 
+                <div>
+                  
+                  <label for='size'> 
+                  taille :
+                  </label> 
+                    <select name='size'>
+                      <option><?php echo $row['taille']?></option>
+                      <option>32</option>
+                      <option>34</option>
+                      <option>36</option>
+                    </select>
+                </div>
+                <div class='colors'>
+                  Color : <?php echo $row['couleur'];?>
+                </div>
+  
+                  
+  
+                <div><a href='detail.php?id=<?php echo $row['id_produit']?>' class='confirmer'>LEARN MORE</a></div>
+                
+            </form>
+        </div>
+        <?php
+          }
+    ?>
+     
+     
 
-              <div><input type='submit' value='order' class='confirmer'>
-              
-          </form>
-      </div>
+      
 
 
       

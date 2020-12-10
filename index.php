@@ -4,6 +4,22 @@
 	session_destroy();
 	$_SESSION=array();
 
+	$server = 'localhost';
+    $username = 'username';
+    $database = 'Clothing';
+    $password ='password';
+
+    try
+    {
+        $conn = new PDO("mysql:host=$server;dbname=$database",$username,$password);
+        $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+        echo "Connected";
+    }
+    catch(PDOException $e)
+    {
+        echo "Could not Connect due to some issues" .$e;
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -111,25 +127,19 @@ if(isset($_POST["inscrire"]))
 			//include("connexion.php");
 			
 			//3)Requete SQL d'inscription de membre
-			$inscription=mysqli_query($conn,"insert into membres values('$idmembre',
-			'$nom','$prenom','$telephone','$adresse','$email','$login','$password')")
-			or die("Erreur de requete SQL!");
+			//$inscription=mysqli_query($conn,"insert into membres values('$idmembre',
+			//'$nom','$prenom','$telephone','$adresse','$email','$login','$password')")
+			//or die("Erreur de requete SQL!");
 			
+			$sql = $conn -> prepare("insert into membres VALUES(?,?,?,?,?,?,?,?)");
+
+			$sql -> execute(array($idmembre,$nom,$prenom,$telephone,$adresse,$email,$login,$password));
 			
 
 
 
 
-			//4) Analyse et affichage des resultats
-			$nbre=mysqli_affected_rows($conn);
-			if($nbre >0)
-			{
-				echo"Ajout de nouveau membre!";
-			}
-			else
-			{
-				echo"Echec d'ajout de nouveau membre!";
-			}
+			
 		}
 
 
