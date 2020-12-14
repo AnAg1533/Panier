@@ -45,119 +45,8 @@
     </style>
   </head>
   <body>
-      
     <?php 
-      
-      
-      
-      
-      require_once("inc/fonction.php");
-
-
-
-      if(isset($_GET["id_produit"]))
-      
-      {​​​​
-      
-          $req="SELECT * FROM produit WHERE id_produit=".$_GET["id_produit"]."";
-      
-          $resultat=executerequete($req);
-      
-          $produit=$resultat->fetch_assoc();       //fetch tout les elements dans $produit
-      
-      //echo($_GET["id_produit"]); //verification 
-      
-          $contenu=""; //creation de contenu
-      
-          $contenu.="<div class=card style=width:18rem;>";
-      
-          
-      
-          $contenu.="<div class=card-body>";
-      
-          $contenu.="<h3 class=card-title>".$produit['titre']."</h3>";  //va chercher le titre dans produit
-      
-          $contenu.="<p class=card-text>";
-      
-          $contenu.="Categorie : ".$produit['categorie']."<br>"; //va chercher la cat dans produit
-      
-          $contenu.="Couleur : ".$produit['couleur']."<br>";  //va chercher la couleur dans produit
-      
-          $contenu.="Taille : ".$produit['taille']."<br>";   //va chercher la taille dans produit
-      
-          $contenu.="<img src=".$produit['photo']."><br>"; 
-      
-          $contenu.="Description : ".$produit['description']."<br>"; 
-      
-          $contenu.="Prix : ".$produit['prix']." $<br>"; 
-      
-          $contenu.="Nombre de produits disponibles :  : ".$produit['stock']."<br>"; 
-      
-          $contenu.="</p>";
-      
-          $contenu.="<br>"; 
-      
-          $contenu.="<form action=panier.php method=POST>";
-      
-          $contenu.="Quantite : <select name=qte>";
-      
-          for($i=1; $i<$produit['stock'] && $i <= 10; $i++)  //limite de 10 par client ! faire la boucle pour les stocks
-      
-          {​​​​
-      
-              $contenu.="<option value=".$i.">".$i."</option>";  //value du choix es le $i et affiche le $i au client 
-      
-          }​​​​
-      
-          $contenu.="</select>";
-      
-          $contenu.="<input type=hidden name=id value=".$produit['id_produit'].">";
-      
-          $contenu.="<input type=submit name=ajout value=Ajouter_Panier>";
-      
-          $contenu.="</form>";
-      
-          $contenu.="<a href=index.php>Retour vers la selection de t-shirt</a>";
-      
-         
-      
-          $contenu.="</div>";
-      
-      
-      
-          echo $contenu;
-      
-      
-      
-      }​​​​
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      /*
+    
         if(isset($_GET['id']))
         {
             echo $_GET['id'];
@@ -213,10 +102,10 @@
                 <a href='produits.php'>Retour vers la selection de t-shirt</a>
                 </div>
             </div>
-                <?php 
+                <?php
             }
        
-            */
+    
     ?>
 
 

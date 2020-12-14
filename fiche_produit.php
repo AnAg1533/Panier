@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/style1.css">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Hello, world!</title>
+    <link rel='stylesheet' href='./css/stylefiche.css'/>
   </head>
   <body>
   

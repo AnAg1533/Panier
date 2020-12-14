@@ -10,4 +10,4 @@ prix INT,stock INT,PRIMARY KEY(id_produit));
 create table membres (idmembre VARCHAR(20) NOT NULL,nom VARCHAR(100) NOT NULL,prenom VARCHAR(100) NOT NULL,adresse VARCHAR(100) NOT NULL, telephone VARCHAR(100) NOT NULL,email VARCHAR(100) NOT NULL
                       ,login VARCHAR(100) NOT NULL, password VARCHAR(100) NOT NULL, PRIMARY KEY(idmembre));
 
-create table commande(Id_commande INT AUTO_INCREMENT, date_commande VARCHAR(200), etat VARCHAR(30),prix DECIMAL(30,0),PRIMARY KEY(Id_commande))
+create table commande(Id_commande INT AUTO_INCREMENT, date_commande VARCHAR(200), etat VARCHAR(30),prix DECIMAL(30,0),PRIMARY KEY(Id_commande));
