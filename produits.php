@@ -1,7 +1,7 @@
 <?php 
       session_start();
-      session_destroy();
-      $_SESSION[] = array();
+      //session_destroy();
+      //$_SESSION[] = array();
 
 
 ?>
@@ -131,7 +131,8 @@
   
                   
   
-                <div><a href='detail.php?id=<?php echo $row['id_produit']?>' class='confirmer'>LEARN MORE</a></div>
+                <div><a href='fiche_produit.php?id_produit=<?php echo $row['id_produit']?>' class='confirmer'>LEARN MORE</a></div>
+               
                 
             </form>
         </div>

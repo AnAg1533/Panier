@@ -6,7 +6,7 @@ function executerequete($req)
 {
 
 
-    $mysqli = new mysqli("localhost", "root", "", "clothing");
+    $mysqli = new mysqli("localhost", "username", "password", "clothing");
 
     if($mysqli->connect_error) die ("Un probleme est survenu lors de la tentative de connexion à la base de données: " .$mysqli->connect_error);
     
@@ -35,6 +35,7 @@ function creationPanier()
         $_SESSION['panier']['prix']=array();
         $_SESSION['panier']['verrou']=false;
     }
+   
     return true;
 }
 
@@ -57,6 +58,7 @@ function ajoutPanier($id_produit,$titre,$qte_produit,$prix)
         array_push($_SESSION['panier']['titre'],$titre);
         array_push($_SESSION['panier']['qte'],$qte_produit);
         array_push($_SESSION['panier']['prix'],$prix);
+        $position++;
     }
     else {
         $_SESSION['panier']['qte'][$position] += $qte_produit;
@@ -90,12 +92,12 @@ function affiche_panier2()
         <td>".$_SESSION['panier']['id_produit'][$i]."</td>
         <td>".$_SESSION['panier']['qte'][$i]."</td>
         <td>".$_SESSION['panier']['prix'][$i]."</td>
-        <td><a href=traitement.php?indice=".$i."><input type=submit name=supprimer value=supprimer /></a></td></tr>";
+        <td><a href=traitement3.php?indice=".$i."><input type=submit name=supprimer value=supprimer /></a></td></tr>";
     }
     echo("<tr><td colspan=3> Total</td><td colspan=2>".montant_global()."$ </td></tr>");
-    echo("<tr><td colspan=5> <a href=traitement.php?param2=valider><input type=submit name=valider value=valider></a></td></tr>");
-    echo("<tr><td colspan=5> <a href=traitement.php?param=delete> Vider mon panier</a></td></tr>");
-    echo("<tr><td colspan=5> <a href=index.php> Boutique</a></td></tr>");
+    echo("<tr><td colspan=5> <a href=traitement3.php?param2=valider><input type=submit name=valider value=valider></a></td></tr>");
+    echo("<tr><td colspan=5> <a href=traitement3.php?param=delete> Vider mon panier</a></td></tr>");
+    echo("<tr><td colspan=5> <a href=produits.php> Boutique</a></td></tr>");
     echo("</table>");
 }
 
