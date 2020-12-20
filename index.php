@@ -4,22 +4,7 @@
 	session_destroy();
 	$_SESSION=array();
 
-	$server = 'localhost';
-    $username = 'username';
-    $database = 'Clothing';
-    $password ='password';
-
-    try
-    {
-        $conn = new PDO("mysql:host=$server;dbname=$database",$username,$password);
-        $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-        echo "Connected";
-    }
-    catch(PDOException $e)
-    {
-        echo "Could not Connect due to some issues" .$e;
-    }
+		require_once("connexion.php");
 ?>
 <!doctype html>
 <html lang="en">

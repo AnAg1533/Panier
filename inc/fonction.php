@@ -6,7 +6,7 @@ function executerequete($req)
 {
 
 
-    $mysqli = new mysqli("localhost", "username", "password", "clothing");
+    $mysqli = new mysqli("localhost", "root", "", "clothing");
 
     if($mysqli->connect_error) die ("Un probleme est survenu lors de la tentative de connexion à la base de données: " .$mysqli->connect_error);
     

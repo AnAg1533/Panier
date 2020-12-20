@@ -6,11 +6,11 @@
     <input name="shipping" type="hidden" value="transport" /><!-- Indication du montant des frais de port  -->
     <input name="tax" type="hidden" value=<?php echo $taxes; ?> /><!--  Indication du montant de la TVA (ou 0.00)  -->
   <!--    Indication de l'URL de retour automatique  -->
-    <input name="return" type="hidden" value="https://panier.000webhostapp.com/LabPanierr/ipn.php" />  <!--PARAMETRAGE DU SITE ! COLLER LE LIEN ICI-->
+    <input name="return" type="hidden" value="https://jokerstorepanier.000webhostapp.com/Panier/ipn.php" />  <!--PARAMETRAGE DU SITE ! COLLER LE LIEN ICI-->
     <!-- /* Indication de l'URL de retour si annulation du paiement */ -->
     <input name="cancel_return" type="hidden" value="" />
     <!-- /* Indication de l'URL de retour pour contrôler le paiement */ -->
-    <input name="notify_url" type="hidden" value="https://panier.000webhostapp.com/LabPanierr/ipn.php" />
+    <input name="notify_url" type="hidden" value="https://jokerstorepanier.000webhostapp.com/Panier/ipn.php" />
   <!--   /* Indication du type d'action */ -->
     <input name="cmd" type="hidden" value="_xclick" />
     <!-- /* Indication de l'adresse e-mail test du vendeur (a remplacer par l'e-mail de votre compte Paypal en production) */ -->

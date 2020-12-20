@@ -9,17 +9,7 @@
 
 <?php
 
-  $server="localhost";
-  $database="clothing";
-  $password="password";
-  $username="username";
-
-  $conn = mysqli_connect($server,$username,$password,$database);
-
-  if(!$conn)
-  {
-    die("Connection failed");
-  }
+    require_once("connexion.php");
  
   $sql = "SELECT * FROM produits";
 

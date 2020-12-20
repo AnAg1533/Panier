@@ -1,7 +1,7 @@
 <?php
     require_once("inc/fonction.php");
     
-    var_dump($_POST);
+    //var_dump($_POST);
     $req="cmd=_notify-validate"; //creation de la requete
     //traitement du contenu de la variable post
     
