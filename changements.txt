@@ -15,3 +15,5 @@
             - faire la page detail dans un  jumbotron -- well ill do it in an independent page
             - Page de confirmation dachat relier au panier dachat avec bouton paypal
             - paiement paypal avec fake account ! 
+
+email de confirmation--- jonnyandnostrateccart@gmail.com  pass : PhpProject123

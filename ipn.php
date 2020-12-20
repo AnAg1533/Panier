@@ -75,9 +75,9 @@ if(!($res=curl_exec($fp)))
                             //mail($to,$subject,$message,$header,$parameters);
                             
                             $to="simteccart@gmail.com";
-                            $sujet="test";
+                            $sujet="Confirmation de la commande";
                             $message="Bonjour votre commande es confirmée.";
-                            $from="commerce_electronique@teccart.com";
+                            $from="jonnyandnostrateccart@gmail.com";
                             $headers="De :".$from;
                             mail($to,$sujet,$message,$headers);
                             
