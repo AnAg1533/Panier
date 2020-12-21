@@ -55,8 +55,9 @@
 </html>
 
 <?php
+require_once("connexion.php");
 
-    $server = 'localhost';
+   /*  $server = 'localhost';
     $username = 'username';
     $database = 'Clothing';
     $password ='password';
@@ -72,7 +73,7 @@
     {
         echo "Could not Connect due to some issues" .$e;
     }
-
+ */
     if(isset($_POST['Nom']) && isset($_POST['Reference']) && isset($_POST['Categorie']) && isset($_POST['Prix']) && isset($_POST['enStock']))
     {
         echo $_POST['Nom'];
